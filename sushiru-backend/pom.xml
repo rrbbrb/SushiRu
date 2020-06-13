@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.github.rrbbrb</groupId>
-	<artifactId>sushi-store-backend</artifactId>
+	<artifactId>sushiru-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sushi-store-backend</name>
-	<description>the backend for e-commerce project "sushi-store"</description>
+	<name>sushiru-backend</name>
+	<description>the backend for e-commerce project SushiRu</description>
 
 	<properties>
 		<java.version>11</java.version>
