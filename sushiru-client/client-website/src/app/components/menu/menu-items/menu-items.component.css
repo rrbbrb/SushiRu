@@ -12,13 +12,13 @@
     line-height: normal;
 }
 
-#add-to-cart {
+#add-to-cart, #add-to-cart:focus {
     color: #FF1384;
     font-size: 0.75rem;
     font-weight: 600;
 }
 
-#add-to-cart:hover {
-    color: #FF1384;
+#add-to-cart:hover, #add-t0-cart:active {
+    color: #FF66B2;
     text-decoration: none;
 }

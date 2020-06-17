@@ -12,6 +12,7 @@
 
 .menu-category:hover, .menu-category:focus, .menu-category:active, .active {
     color: #FF1384;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 512px) {
