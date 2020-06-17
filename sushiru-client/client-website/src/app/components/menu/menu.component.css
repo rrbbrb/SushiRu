@@ -1,0 +1,24 @@
+.menu-bar {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.menu-category {
+    font-size: 0.875rem;
+    margin-right: 0.15rem;
+    margin-left: 0.15rem;
+    color: #474747;
+}
+
+.menu-category:hover, .menu-category:focus, .menu-category:active, .active {
+    color: #FF1384;
+}
+
+@media screen and (max-width: 512px) {
+    .menu-category {
+        font-size: 0.75rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }    
+}
+

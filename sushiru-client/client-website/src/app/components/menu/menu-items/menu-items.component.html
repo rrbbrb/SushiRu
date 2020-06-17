@@ -1,0 +1,21 @@
+<div id="sushi-card">
+  <p-card [style]="{width: '220px'}" styleClass="ui-card-shadow">
+    <p-header>
+      <img src="Card" src="assets/images/products/Tuna.png">
+    </p-header>
+    <div id="card-upper" class="row">
+      <div class="col-7">
+        <h4 id="card-title">Tuna hand roll syshi</h4>
+      </div>
+      <div class="col-2">
+        <p-inputNumber id="card-number-input" size="1" [(ngModel)]="value1" [showButtons]="true" [min]="0" [max]="100"
+          decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary"></p-inputNumber>
+
+      </div>
+    </div>
+
+    <p-footer>
+      <a id="add-to-cart" href="#">Add to Cart</a>
+    </p-footer>
+  </p-card>
+</div>

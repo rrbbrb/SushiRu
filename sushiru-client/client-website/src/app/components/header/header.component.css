@@ -1,0 +1,54 @@
+.navbar {
+  color: #474747;
+  margin: 0.5rem 12% 0.2rem 12%;
+}
+
+
+.navbar-brand {
+  margin-right: 6%;
+}
+
+.navbar-options {
+  font-size: 0.875rem;
+  padding-left: 2rem;
+}
+
+.navbar-options:hover,
+.navbar-options:active,
+.navbar-options:focus,
+.active {
+  color: #FF1384;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-options {
+    padding-left: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .navbar-options {
+    padding-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 3%;
+  }
+
+  .language-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
