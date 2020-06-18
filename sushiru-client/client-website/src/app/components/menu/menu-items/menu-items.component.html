@@ -1,22 +1,20 @@
 <div class="row justify-content-center">
-  <div class="col-lg-4 col-md-3 col-sm-2 col-xs-2">
+  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6" *ngFor="let product of products">
     <div id="sushi-card">
-      <p-card [style]="{width: '220px'}" styleClass="ui-card-shadow">
+      <p-card [style]="{width: '230px'}" styleClass="ui-card-shadow">
         <p-header>
-          <img src="Card" src="assets/images/products/Tuna.png">
+          <img src="Card" src="{{ product.imageURL }}">
         </p-header>
         <div id="card-upper" class="row">
           <div class="col-7">
-            <h4 id="card-title">Fresh Shrimp Hand Roll</h4>
+            <h4 id="card-title">{{ product.productName }}</h4>
           </div>
           <div class="col-2">
             <p-inputNumber id="card-number-input" size="1" [(ngModel)]="value1" [showButtons]="true" [min]="0"
               [max]="100" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
             </p-inputNumber>
-
           </div>
         </div>
-
         <p-footer>
           <a id="add-to-cart" href="#">Add to Cart</a>
         </p-footer>
