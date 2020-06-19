@@ -12,6 +12,7 @@ import { MenuItemsComponent } from './components/menu/menu-items/menu-items.comp
 import {CardModule} from 'primeng/card';
 import {InputNumberModule} from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     FormsModule,
     CardModule,
     InputNumberModule

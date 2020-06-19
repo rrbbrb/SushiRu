@@ -10,8 +10,9 @@ import { Product } from 'src/app/common/product';
 })
 export class MenuItemsComponent implements OnInit {
 
-  value1: number = 1;
+  defaultValue: number = 1;
   products: Product[];
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -25,5 +26,8 @@ export class MenuItemsComponent implements OnInit {
       }
     )
   }
+
+  min: number = 0;
+  max: number = 10;
 
 }
