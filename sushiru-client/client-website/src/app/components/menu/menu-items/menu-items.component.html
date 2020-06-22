@@ -10,8 +10,8 @@
             <h4 id="card-title">{{ product.productName }}</h4>
           </div>
           <div class="col-2">
-            <p-inputNumber id="card-number-input" size="1" [(ngModel)]="defaultValue" [showButtons]="true" [min]="min"
-              [max]="max" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
+            <p-inputNumber id="card-number-input" size="1" [(ngModel)]="defaultValue" [showButtons]="true" [min]="0"
+              [max]="100" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
             </p-inputNumber>
           </div>
         </div>
