@@ -27,14 +27,15 @@ export class MenuItemsComponent implements OnInit {
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
     if(hasCategoryId) {
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+      this.productService.getProductList(this.currentCategoryId).subscribe(
+        data => {
+          this.products = data;
+        }
+      )
     } else {
       this.currentCategoryId = 1;
     }
-    this.productService.getProductList(this.currentCategoryId).subscribe(
-      data => {
-        this.products = data;
-      }
-    )
+
   }
 
 }

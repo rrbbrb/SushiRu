@@ -4,10 +4,12 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemsComponent } from './components/menu/menu-items/menu-items.component';
 
 const appRoutes: Routes = [
-    { path: 'products', component: MenuComponent },
-    { path: 'product-categories/:id', component: MenuItemsComponent },
-    { path: '', redirectTo: '/products', pathMatch: 'full'},
-    { path: '**', redirectTo: '/products', pathMatch: 'full'}
+    { path: 'menu', component: MenuComponent, children: [
+        { path: 'category', redirectTo: '/menu/category/1', pathMatch: 'full' },
+        { path: 'category/:id', component: MenuItemsComponent }
+    ] },
+    { path: '', redirectTo: 'menu/category', pathMatch: 'full'},
+    { path: '**', redirectTo: 'menu/category', pathMatch: 'full'}
 ]
 
 @NgModule({

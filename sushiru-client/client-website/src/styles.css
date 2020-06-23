@@ -233,7 +233,6 @@ p {
 }
 
 
-
 .banner {
   max-width: 100%;
   padding: 1.5% 0% 1.5% 0%;
@@ -241,4 +240,5 @@ p {
 
 .nav-link {
   font-weight: 500;
+  color: #474747;
 }

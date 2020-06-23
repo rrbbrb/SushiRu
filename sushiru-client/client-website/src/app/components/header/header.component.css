@@ -13,9 +13,9 @@
   padding-left: 2rem;
 }
 
-.navbar-options:hover,
-.navbar-options:active,
-.navbar-options:focus,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus,
 .active {
   color: #FF1384;
   text-decoration: none;
