@@ -31,7 +31,7 @@ export class MenuItemsComponent implements OnInit {
         data => {
           this.products = data;
         }
-      )
+      );
     } else {
       this.currentCategoryId = 1;
     }

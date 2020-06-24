@@ -1,9 +1,9 @@
 <ul class="nav justify-content-center menu-bar">
-  <li class="nav-item"><a class="nav-link menu-category" href="#" routerLink="/menu/category/1" routerLinkActive="active">Nigiri</a></li>
-  <li class="nav-item"><a class="nav-link menu-category" href="#" routerLink="/menu/category/2" routerLinkActive="active">Gunkan Maki</a></li>
-  <li class="nav-item"><a class="nav-link menu-category" href="#" routerLink="/menu/category/3" routerLinkActive="active">Sashimi</a></li>
-  <li class="nav-item"><a class="nav-link menu-category" href="#" routerLink="/menu/category/4" routerLinkActive="active">Temaki</a></li>
-  <li class="nav-item"><a class="nav-link menu-category" href="#" routerLink="/menu/category/5" routerLinkActive="active">Inarizushi</a></li>
+  <li *ngFor="let category of productCategories" class="nav-item">
+    <a class="nav-link menu-category" href="#" routerLink="/menu/category/{{ category.id }}" routerLinkActive="active">
+      {{ category.categoryName }}
+    </a>
+  </li>
 </ul>
 <div class="row justify-content-center">
   <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-8">
