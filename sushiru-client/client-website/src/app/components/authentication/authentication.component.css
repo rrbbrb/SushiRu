@@ -1,0 +1,23 @@
+.active-auth {
+  border-bottom: 5px solid #FF1384;
+  text-decoration: none;
+}
+
+.nav-link {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 0rem 0rem 1rem 0rem;
+    margin: 3.5rem 1.2rem 2rem 1.2rem;
+}
+
+.nav-link:hover {
+    color: #737373;
+}
+
+.nav-link:focus, .nav-link:active {
+    color: #474747;
+}
+

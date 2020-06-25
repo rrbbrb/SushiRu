@@ -1,10 +1,20 @@
-<ul class="nav justify-content-center menu-bar">
+<!-- banner -->
+<div class="row justify-content-center">
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8 col-xl-7">
+    <img src="../assets/images/Banner.png" alt="Banner - NT$40 per plate" class="banner">
+  </div>
+</div>
+
+<!-- menu bar -->
+<ul class="nav justify-content-center menu-bar" style="height: 78px;">
   <li *ngFor="let category of productCategories" class="nav-item">
-    <a class="nav-link menu-category" href="#" routerLink="/menu/category/{{ category.id }}" routerLinkActive="active">
+    <a class="nav-link menu-category" routerLink="/menu/category/{{ category.id }}" routerLinkActive="active">
       {{ category.categoryName }}
     </a>
   </li>
 </ul>
+
+<!-- menu items -->
 <div class="row justify-content-center">
   <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-8">
     <router-outlet></router-outlet>

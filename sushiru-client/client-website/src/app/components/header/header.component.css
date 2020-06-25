@@ -3,14 +3,35 @@
   margin: 0.5rem 12% 0.2rem 12%;
 }
 
-
 .navbar-brand {
   margin-right: 3%;
 }
 
+input[type="text"],
+.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #474747;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0px 10px 0px 10px;
+}
+
+input[type="text"]:focus,
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+::placeholder {
+  font-size: 0.8rem;
+  color: #BEBEBE;
+}
+
 .navbar-options {
   font-size: 0.875rem;
-  padding-left: 2rem;
+  padding-left: 1.7rem;
 }
 
 .nav-link:hover,
@@ -21,22 +42,50 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 1225px) {
-  .navbar-options {
-    padding-left: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .navbar-options {
-    padding-left: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 1096px) {
+@media screen and (max-width: 1435px) {
   .navbar-options {
     padding-left: 0.55rem;
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 1355px) {
+  .navbar-options {
+    padding-left: 0.35rem;
     font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .navbar-options {
+    padding-left: 0.15rem;
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .navbar-options {
+    padding-left: 0.1rem;
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-options {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .navbar-options {
+    font-size: 100%;
+    padding-left: 0rem;
+
+  }
+
+  .language-icon {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
@@ -45,16 +94,6 @@
     margin-left: 5%;
     margin-right: 5%;
   }
-
-  .navbar-options {
-    padding-left: 0rem;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .navbar-options {
-    font-size: 70%;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -62,13 +101,16 @@
     margin-left: 0;
     margin-right: 0;
   }
+}
 
-  .navbar-options {
-    font-size: 85%;
+@media screen and (max-width: 583px) {
+  input[type="text"],
+  .form-control {
+    width: 90%;
+    margin: 0px;
   }
 
-  .language-icon {
-    padding-left: 6px;
-    padding-right: 6px;
+  .fa-search {
+    display: none !important;
   }
 }

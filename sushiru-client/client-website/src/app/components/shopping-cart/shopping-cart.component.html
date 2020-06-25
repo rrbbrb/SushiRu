@@ -1,0 +1,100 @@
+<div class="text-center">
+  <h3>Your Shopping Cart</h3>
+</div>
+<div class="row justify-content-center order-details">
+
+  <!-- left column start -->
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-5 order-details-column">
+    <h4>Items</h4>
+    <hr>
+    <!-- card start -->
+    <div class="card my-4" style="max-height: auto; max-width: auto;">
+      <div class="row no-gutters">
+
+        <div class="col-md-5">
+          <img src="../../../assets/images/products/ArcticSurfClam.png" class="card-img" alt="...">
+        </div>
+
+        <div class="col-md-7">
+          <div class="card-body">
+
+            <h5 class="card-title">Kabayaki Conger Eel Hand Roll</h5>
+
+            <div class="row" style="height: 40px;">
+              <div class="col-6">
+                <p class="card-text">Quantity:</p>
+              </div>
+              <div class="col-6 text-left">
+                <p-inputNumber id="card-number-input" size="1" [(ngModel)]="value" [showButtons]="true" [min]="0"
+                  [max]="100" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
+                </p-inputNumber>
+              </div>
+            </div>
+
+            <p class="card-text">Subtotal:</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- card end -->
+
+  </div>
+  <!-- left column end -->
+
+  <!-- right column start -->
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-5 order-details-column">
+    <h4>Order Summary</h4>
+    <hr>
+
+    <div id="cost-details">
+
+      <div class="row" style="margin-top: 2.5rem;">
+        <div class="col-md-4 col-sm-5 col-xs-3">
+          <p>Food:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
+          <p>NT$ 2400</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-5">
+          <p>Delivery Cost:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-right">
+          <p>NT$ 50</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7 col-sm-9">
+          <hr id="costs-cal">
+        </div>
+      </div>
+
+      <div class="row mt-2" id="total-cost">
+        <div class="col-md-4 col-sm-5">
+          <p>Total:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-right">
+          <p>NT$ 290</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7 col-sm-9 text-center">
+          <button class="btn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- right column end -->
+</div>

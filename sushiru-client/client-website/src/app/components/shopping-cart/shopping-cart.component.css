@@ -1,0 +1,168 @@
+h3 {
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 3rem 1.2rem 2rem 1.2rem;
+  font-weight: 600;
+  color: #474747;
+}
+
+.order-details {
+  padding-top: 1rem;
+}
+
+.order-details-column {
+  padding: 0rem 2rem 0rem 2rem;
+  margin-bottom: 4.5rem;
+}
+
+h4 {
+  padding-left: 2.8rem;
+  font-size: 125%;
+  font-weight: 600;
+  color: #474747;
+}
+
+hr {
+  width: 85%;
+  height: 5px;
+  background-color: #FFDB5B;
+  border: none;
+}
+
+.card {
+  margin-left: 2.8rem;
+  border: none;
+}
+
+.card-body {
+  padding: 0.5rem 1rem 0rem 1rem;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  height: 30px;
+  line-height: 100%;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.1rem;
+  padding-top: 0.5rem;
+  line-height: 100%;
+}
+
+p-inputNumber {
+  height: 20px;
+}
+
+#costs-cal {
+  background-color: #E7E7E7;
+  height: 1px;
+  width: 100%;
+}
+
+#cost-details {
+  margin-left: 3rem;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.3rem 0rem 0.3rem 0rem;
+}
+
+#total-cost p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #FF1384;
+  color: #FFFFFF;
+  width: 90%;
+  margin: 2rem 1rem 0.8rem 1rem;
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #FF66B2;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1245px) {
+
+  .card-title,
+  .card-text {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+
+  .card-title,
+  .card-text {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1052px) {
+
+  .card-title,
+  .card-text {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .order-details-column {
+    padding: 0rem 0.3rem 0rem 0.3rem;
+  }
+
+  .card-text {
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .order-details-column {
+    padding: 0rem 0.1rem 0rem 0.1rem;
+  }
+
+  img {
+    max-width: 85%;
+  }
+
+  .card-title,
+  .card-text {
+    font-size: 82%;
+  }
+
+  .card-title {
+    margin-top: 1rem;
+  }
+
+  #cost-details p,
+  .btn {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  #cost-details p,
+  .btn {
+    font-size: 100%;
+  }
+
+  #cost-details {
+    max-width: 82%;
+  }
+}
