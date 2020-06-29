@@ -18,9 +18,8 @@ const appRoutes: Routes = [
         { path: 'user/login', component: LoginComponent },
         { path: 'user/signup', component: SignupComponent }
     ] },
-    { path: 'cart', component: ShoppingCartComponent, children: [
-        { path: 'checkout', component: CheckoutComponent }
-    ] },
+    { path: 'cart', component: ShoppingCartComponent },
+    { path: 'checkout', component: CheckoutComponent },
     { path: '', redirectTo: 'menu/category', pathMatch: 'full'},
     { path: '**', redirectTo: 'menu/category', pathMatch: 'full'}
 ]
