@@ -1,0 +1,178 @@
+<div class="text-center">
+  <h3>Order History</h3>
+</div>
+
+<!-- current order -->
+
+<div style="max-width: 56%" class="section-title mx-auto">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-6 col-sm-8 col-xs-10">
+      <h4 class="section-title">Your Current Order</h4>
+    </div>
+    <div class="col-lg-7 col-md-6 col-sm-4 col-xs-2">
+    </div>
+  </div>
+  <div class="row">
+    <hr>
+  </div>
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Order ID</th>
+      <th>Status</th>
+      <th>Total</th>
+      <th>Payment Method</th>
+      <th>Payment Status</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>2020/08/05</td>
+      <td>15</td>
+      <td>Confirmed</td>
+      <td>NT$ 290</td>
+      <td>Pay on Delivery</td>
+      <td>Unpaid</td>
+      <td><button class="btn" (click)="showOrderDetails()">more <i class="fas fa-caret-down"></i></button></td>
+    </tr>
+  </table>
+
+  <table class="expanded-details" *ngIf="expand">
+    <tr>
+      <th>Ordered Items</th>
+      <th>Delivery Address</th>
+    </tr>
+    <tr>
+        <!-- ordered items -->
+      <td>
+        <ul>
+          <li>Salmon Belly Nigiri x2</li>
+          <li>Tuna Nigiri x3</li>
+          <li>Tamagoyaki Nigiri x1</li>
+        </ul>
+      </td>
+
+      <!-- delivery address -->
+      <td>
+          <p>Joyce Wu</p>
+          <p>3/F Linyi Street No.232 100 Taipei City</p>
+          <p>+09 12345678</p>
+
+          <!-- payment info -->
+
+          <table id="payment-info">
+              <tr>
+                  <th>Payment Info</th>
+              </tr>
+              <tr>
+                  <td>Pay on Delivery</td>
+              </tr>
+          </table>
+
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+
+
+<!-- past order(s) -->
+
+<div style="max-width: 56%" class="section-title mx-auto">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-6 col-sm-8 col-xs-10">
+      <h4 class="section-title">Your Past Order(s)</h4>
+    </div>
+    <div class="col-lg-7 col-md-6 col-sm-4 col-xs-2">
+    </div>
+  </div>
+  <div class="row">
+    <hr>
+  </div>
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Order ID</th>
+      <th>Status</th>
+      <th>Total</th>
+      <th>Payment Method</th>
+      <th>Payment Status</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>2020/08/01</td>
+      <td>8</td>
+      <td>Completed</td>
+      <td>NT$ 210</td>
+      <td>Pay on Delivery</td>
+      <td>Paid</td>
+      <td><button class="btn" (click)="showOrderDetails()">more <i class="fas fa-caret-down"></i></button></td>
+    </tr>
+
+    <!-- past orders expanded details -->
+
+    <tr>
+        <td colspan="7">
+            <table class="expanded-details" *ngIf="expand">
+                <tr>
+                  <th>Ordered Items</th>
+                  <th>Delivery Address</th>
+                </tr>
+                <tr>
+                    <!-- ordered items -->
+                  <td>
+                    <ul>
+                      <li>Salmon Belly Nigiri x2</li>
+                      <li>Tuna Nigiri x3</li>
+                      <li>Tamagoyaki Nigiri x1</li>
+                    </ul>
+                  </td>
+            
+                  <!-- delivery address -->
+                  <td>
+                      <p>Joyce Wu</p>
+                      <p>3/F Linyi Street No.232 100 Taipei City</p>
+                      <p>+09 12345678</p>
+            
+                      <!-- payment info -->
+            
+                      <table id="payment-info">
+                          <tr>
+                              <th>Payment Info</th>
+                          </tr>
+                          <tr>
+                              <td>Pay on Delivery</td>
+                          </tr>
+                      </table>
+            
+                  </td>
+                </tr>
+            
+              </table>
+        </td>
+    </tr>
+
+
+    <tr>
+      <td>2020/07/25</td>
+      <td>5</td>
+      <td>Canceled</td>
+      <td>NT$ 370</td>
+      <td>Pay on Delivery</td>
+      <td>Canceled</td>
+      <td><button class="btn" (click)="showOrderDetails()">more <i class="fas fa-caret-down"></i></button></td>
+    </tr>
+    <tr>
+      <td>2020/07/05</td>
+      <td>4</td>
+      <td>Completed</td>
+      <td>NT$ 590</td>
+      <td>Pay on Delivery</td>
+      <td>Paid</td>
+      <td><button class="btn" (click)="showOrderDetails()">more <i class="fas fa-caret-down"></i></button></td>
+    </tr>
+  </table>
+</div>

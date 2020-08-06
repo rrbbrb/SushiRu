@@ -1,1 +1,152 @@
-<p>checkout works!</p>
+<div class="text-center">
+  <h3>Checkout</h3>
+</div>
+<div class="row justify-content-center checkout-details">
+
+  <!-- left column start -->
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-5 checkout-column">
+    <h4>Your Delivery Details</h4>
+    <hr>
+
+    <form>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" aria-describedby="fullname"
+              placeholder="Enter your full name">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="contact-number">Contact Number</label>
+            <input type="text" class="form-control" id="contact-number" placeholder="Enter your contact number">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Enter your delivery address">
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="district">District</label>
+            <input type="text" class="form-control" id="district" placeholder="District">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Taipei City">
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+
+  </div>
+  <!-- left column end -->
+
+  <!-- right column start -->
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-5 checkout-column">
+    <h4>Review Your Order</h4>
+    <hr>
+
+    <div id="cost-details">
+
+      <!-- sushi starts -->
+
+      <div class="row" style="margin-top: 2.5rem;">
+        <div class="col-md-4 col-sm-5 col-xs-3">
+          <p class="sushi-item">Salmon Belly Nigiri x2</p>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
+          <p>NT$ 80</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-5 col-xs-3">
+          <p class="sushi-item">Tuna Nigiri x3</p>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
+          <p>NT$ 120</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-5 col-xs-3">
+          <p class="sushi-item">Tamagoyaki Nigiri x1</p>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
+          <p>NT$ 40</p>
+        </div>
+      </div>
+
+      <!-- sushi ends -->
+
+      <div class="row">
+        <div class="col-md-7 col-sm-9">
+          <hr id="costs-cal">
+        </div>
+      </div>
+
+      <!-- food and delivery starts -->
+
+      <div class="row" style="margin-top: 1.125rem;">
+        <div class="col-md-4 col-sm-5 col-xs-3">
+          <p>Food:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
+          <p>NT$ 240</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-5">
+          <p>Delivery Cost:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-right">
+          <p>NT$ 50</p>
+        </div>
+      </div>
+
+      <!-- food and delivery ends -->
+
+
+      <div class="row">
+        <div class="col-md-7 col-sm-9">
+          <hr id="costs-cal">
+        </div>
+      </div>
+
+      <!-- total starts -->
+
+      <div class="row mt-2" id="total-cost">
+        <div class="col-md-4 col-sm-5">
+          <p>Total:</p>
+        </div>
+        <div class="col-md-3 col-sm-4 text-right">
+          <p>NT$ 290</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7 col-sm-9 text-center">
+          <button class="btn">
+            Place Order
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- right column end -->
+</div>

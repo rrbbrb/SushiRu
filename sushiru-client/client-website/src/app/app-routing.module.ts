@@ -7,6 +7,8 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { SignupComponent } from './components/authentication/signup/signup.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './components/shopping-cart/checkout/checkout.component';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { AccountComponent } from './components/account/account.component';
 
 const appRoutes: Routes = [
     { path: 'menu', component: MenuComponent, children: [
@@ -20,6 +22,8 @@ const appRoutes: Routes = [
     ] },
     { path: 'cart', component: ShoppingCartComponent },
     { path: 'checkout', component: CheckoutComponent },
+    { path: 'orders', component: OrderHistoryComponent },
+    { path: 'account', component: AccountComponent },
     { path: '', redirectTo: 'menu/category', pathMatch: 'full'},
     { path: '**', redirectTo: 'menu/category', pathMatch: 'full'}
 ]

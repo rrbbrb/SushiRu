@@ -17,6 +17,9 @@ import { SignupComponent } from './components/authentication/signup/signup.compo
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './components/shopping-cart/checkout/checkout.component';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { AccountComponent } from './components/account/account.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { CheckoutComponent } from './components/shopping-cart/checkout/checkout.
     LoginComponent,
     SignupComponent,
     ShoppingCartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderHistoryComponent,
+    AccountComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

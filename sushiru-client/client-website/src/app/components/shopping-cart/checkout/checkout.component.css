@@ -1,0 +1,153 @@
+form {
+  margin: 1.2rem 0rem 1.2rem 2.8rem;
+  max-width: 75%;
+}
+
+.form-group {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+::placeholder {
+  font-size: 0.75rem;
+  color: #BEBEBE;
+}
+
+input,
+.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #474747;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: #474747;
+}
+
+input,
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+h3 {
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 3rem 1.2rem 2rem 1.2rem;
+  font-weight: 600;
+  color: #474747;
+}
+
+.checkout-details {
+  padding-top: 1rem;
+}
+
+.checkout-column {
+  padding: 0rem 2rem 0rem 2rem;
+  margin-bottom: 4.5rem;
+}
+
+.sushi-item {
+    font-weight: 500;
+}
+
+h4 {
+  padding-left: 2.8rem;
+  font-size: 125%;
+  font-weight: 600;
+  color: #474747;
+}
+
+hr {
+  width: 85%;
+  height: 5px;
+  background-color: #FFDB5B;
+  border: none;
+}
+
+#costs-cal {
+  background-color: #E7E7E7;
+  height: 1px;
+  width: 100%;
+}
+
+#cost-details {
+  margin-left: 3rem;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.3rem 0rem 0.3rem 0rem;
+}
+
+#total-cost p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #FF1384;
+  color: #FFFFFF;
+  width: 90%;
+  margin: 2rem 1rem 0.8rem 1rem;
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #FF66B2;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1245px) {
+
+}
+
+@media screen and (max-width: 1199px) {
+
+}
+
+@media screen and (max-width: 1052px) {
+
+}
+
+@media screen and (max-width: 1010px) {
+  .checkout-column {
+    padding: 0rem 0.3rem 0rem 0.3rem;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .checkout-column {
+    padding: 0rem 0.1rem 0rem 0.1rem;
+  }
+
+  #cost-details p,
+  .btn {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  #cost-details p,
+  .btn {
+    font-size: 100%;
+  }
+
+  #cost-details {
+    max-width: 82%;
+  }
+}
