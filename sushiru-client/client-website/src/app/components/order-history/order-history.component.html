@@ -114,9 +114,9 @@
 
     <!-- past orders expanded details -->
 
-    <tr>
+    <tr *ngIf="expand">
         <td colspan="7">
-            <table class="expanded-details" *ngIf="expand">
+            <table class="expanded-details">
                 <tr>
                   <th>Ordered Items</th>
                   <th>Delivery Address</th>

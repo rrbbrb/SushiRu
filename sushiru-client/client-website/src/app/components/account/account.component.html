@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>Change Password</td>
-      <td><button class="btn small-button" (click)="onChangePassword()">change</button></td>
+      <td><button class="btn small-button" (click)="onChangePassword(true)">change</button></td>
     </tr>
   </table>
 
@@ -61,7 +61,7 @@
       <button class="btn" style="width: 8.5rem;">
         update password
       </button>
-      <button class="btn small-button" style="background-color: transparent; color: #FF1384;">
+      <button class="btn small-button" (click)="onChangePassword(false)" style="background-color: transparent; color: #FF1384;">
         cancel
       </button>
     </div>
@@ -128,15 +128,15 @@
     </div>
   </form>
 
-  <button style="width: 6.75rem" class="btn">
+  <button style="width: 6.75rem" class="btn" (click)="onEditAddress(true)" *ngIf="!editAddress">
     edit address
   </button>
 
-  <div>
+  <div *ngIf="editAddress">
     <button class="btn small-button">
       confirm
     </button>
-    <button class="btn small-button" style="background-color: transparent; color: #FF1384;">
+    <button class="btn small-button" (click)="onEditAddress(false)" style="background-color: transparent; color: #FF1384;">
       cancel
     </button>
 

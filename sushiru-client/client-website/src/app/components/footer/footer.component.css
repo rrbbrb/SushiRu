@@ -1,0 +1,19 @@
+p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #474747;
+}
+
+a:hover {
+  color: #FF1384;
+}
+
+div {
+    padding: 12rem 0rem 1.25rem 0rem;
+}

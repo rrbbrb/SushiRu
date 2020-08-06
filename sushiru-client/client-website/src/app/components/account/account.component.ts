@@ -8,14 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class AccountComponent implements OnInit {
 
   changePassword: boolean = false;
+  editAddress: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onChangePassword() {
-    this.changePassword = !this.changePassword;
+  onChangePassword(changePassword: boolean) {
+    this.changePassword = changePassword;
+  }
+
+  onEditAddress(editAddress: boolean) {
+    this.editAddress = editAddress;
   }
 
 }
