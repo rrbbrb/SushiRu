@@ -2,13 +2,11 @@
     padding: 0rem 0rem 1rem 0rem;
     margin: 3rem 1.2rem 2rem 1.2rem;
     font-weight: 600;
-    color: #474747;
   }
 
   h4 {
     font-size: 125%;
     font-weight: 600;
-    color: #474747;
   }
 
   .section-title {
@@ -65,11 +63,11 @@
   }
 
   .expanded-details {
-      margin: 2.25rem 0rem 0.75rem 0rem;
+    margin: 2.25rem 0rem 0.75rem 0rem;
   }
 
   .expanded-details th {
-      padding-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   .expanded-details td {
@@ -86,5 +84,5 @@
   }
 
   #payment-info {
-      margin-top: 2.5rem;
+    margin-top: 2.5rem;
   }

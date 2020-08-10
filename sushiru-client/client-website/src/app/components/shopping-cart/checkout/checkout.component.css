@@ -1,5 +1,5 @@
 form {
-  margin: 1.2rem 0rem 1.2rem 2.8rem;
+  margin: 1.2rem 0rem 2.25rem 2.8rem;
   max-width: 75%;
 }
 
@@ -26,7 +26,6 @@ input,
   box-shadow: none;
   border-radius: 0;
   font-size: 0.875rem;
-  color: #474747;
 }
 
 input,
@@ -40,7 +39,6 @@ h3 {
   padding: 0rem 0rem 1rem 0rem;
   margin: 3rem 1.2rem 2rem 1.2rem;
   font-weight: 600;
-  color: #474747;
 }
 
 .checkout-details {
@@ -53,14 +51,13 @@ h3 {
 }
 
 .sushi-item {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 h4 {
   padding-left: 2.8rem;
   font-size: 125%;
   font-weight: 600;
-  color: #474747;
 }
 
 hr {
@@ -109,17 +106,17 @@ p {
   box-shadow: none;
 }
 
-@media screen and (max-width: 1245px) {
-
+#payment-method {
+  padding: 1rem 0rem 0rem 2.8rem;
+  font-weight: 500;
+  font-size: 105%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1245px) {}
 
-}
+@media screen and (max-width: 1199px) {}
 
-@media screen and (max-width: 1052px) {
-
-}
+@media screen and (max-width: 1052px) {}
 
 @media screen and (max-width: 1010px) {
   .checkout-column {
