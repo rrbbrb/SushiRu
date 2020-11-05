@@ -67,6 +67,15 @@ hr {
   border: none;
 }
 
+table {
+  width: 70%;
+}
+
+td {
+  width: 40%;
+}
+
+
 #costs-cal {
   background-color: #E7E7E7;
   height: 1px;
@@ -112,17 +121,16 @@ p {
   font-size: 105%;
 }
 
-@media screen and (max-width: 1245px) {}
-
-@media screen and (max-width: 1199px) {}
-
-@media screen and (max-width: 1052px) {}
+@media screen and (max-width: 1245px) {
+  table {
+    width: 80%;
+  }
+}
 
 @media screen and (max-width: 1010px) {
   .checkout-column {
     padding: 0rem 0.3rem 0rem 0.3rem;
   }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -146,5 +154,9 @@ p {
 
   #cost-details {
     max-width: 82%;
+  }
+
+  table {
+    width: 90%;
   }
 }

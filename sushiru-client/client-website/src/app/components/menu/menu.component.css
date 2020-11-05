@@ -1,24 +1,59 @@
+.banner {
+  max-width: 100%;
+  padding: 1.5% 0% 1.5% 0%;
+}
+
 .menu-bar {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  height: 72px;
 }
 
 .menu-category {
-    font-size: 0.875rem;
-    margin-right: 0.15rem;
-    margin-left: 0.15rem;
-    color: #474747;
+  font-size: 0.875rem;
+  margin-right: 0.15rem;
+  margin-left: 0.15rem;
+  color: #474747;
 }
 
-.menu-category:hover, .menu-category:focus, .menu-category:active, .active {
-    color: #FF1384;
-    text-decoration: none;
+.menu-category:hover,
+.menu-category:focus,
+.menu-category:active,
+.active {
+  color: #FF1384;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 512px) {
-    .menu-category {
-        font-size: 0.75rem;
-        margin-right: 0rem;
-        margin-left: 0rem;
-    }    
+  .menu-category {
+    font-size: 0.75rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+  .menu-bar {
+    height: 68px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-link {
+    padding-left: 0.675rem;
+    padding-right: 0.675rem;
+  }
+  .menu-bar {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nav-link {
+    padding-left: 0.425rem;
+    padding-right: 0.425rem;
+  }
+}
+
+@media screen and (max-width: 302px) {
+  .menu-bar {
+    padding-bottom: 4rem;
+  }
 }

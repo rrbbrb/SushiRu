@@ -1,15 +1,10 @@
 package io.github.rrbbrb.sushirubackend.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "order_statuses")
-@Getter
-@Setter
 public class OrderStatus {
 
     @Id
@@ -23,4 +18,27 @@ public class OrderStatus {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "orderStatus")
     private Set<Order> orders;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getOrderStatusName() {
+        return orderStatusName;
+    }
+
+    public void setOrderStatusName(String orderStatusName) {
+        this.orderStatusName = orderStatusName;
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
+    }
 }

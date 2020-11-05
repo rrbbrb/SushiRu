@@ -1,43 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../common/product';
+import { ProductDto } from '../common/product';
 import { ProductCategory } from '../common/product-category';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { CartItemPayload } from '../common/cart-item-payload';
+import { CartItem } from '../common/cart-item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private baseURL = 'http://localhost:8080/api/';
+  private productURL = 'http://localhost:8080/api/products';
 
   constructor(private httpClient: HttpClient) { }
 
-  getProductList(categoryId: number): Observable<Product[]> {
-    const searchURL = `${this.baseURL}products/search/findByCategoryId?id=${categoryId}`;
-    return this.httpClient.get<GetResponseProducts>(searchURL).pipe(
-      map(response => response._embedded.products)
-    );
+  getProductsByCategory(categoryId: number): Observable<ProductDto[]> {
+    return this.httpClient.get<ProductDto[]>(`${this.productURL}/category/${categoryId}`);
   }
 
   getProductCategories(): Observable<ProductCategory[]> {
-    const categoryURL = `${this.baseURL}product-categories`;
-    console.log(`url=${categoryURL}`);
-    return this.httpClient.get<GetResponseProductCategory>(categoryURL).pipe(
-      map(response => response._embedded.productCategory)
-    );
+    return this.httpClient.get<ProductCategory[]>(`${this.productURL}/categories`);
   }
-}
-
-interface GetResponseProducts {
-  _embedded: {
-    products: Product[];
+  
+  decreaseUnitsInStock(cartItems: CartItem[]): Observable<any> {
+    return this.httpClient.put<Map<string, CartItem[]>>(`${this.productURL}/decrease-units`, cartItems);
   }
-}
 
-interface GetResponseProductCategory {
-  _embedded: {
-    productCategory: ProductCategory[];
+  addBackUnitsInStock(cartItems: CartItem[]): Observable<any> {
+    return this.httpClient.put<boolean>(`${this.productURL}/add-back`, cartItems);
   }
 }

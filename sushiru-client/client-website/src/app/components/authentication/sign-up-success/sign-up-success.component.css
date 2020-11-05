@@ -1,0 +1,19 @@
+p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #FF1384;
+}
+
+a:hover {
+  color: #FF66B2;
+}
+
+.sign-up-success {
+  min-height: 500px;
+  margin: 5rem 0rem 3rem 0rem;
+}

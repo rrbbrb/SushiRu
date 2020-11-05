@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  totalCartItems: number;
+
+  constructor(private authService: AuthService, private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
+    this.shoppingCartService.currentQuantity.subscribe(quantity => {
+      this.totalCartItems = quantity;
+    });
+  }
+
+  isAuthenticated(): boolean {
+    return this.authService.isAuthenticated();
   }
 
 }

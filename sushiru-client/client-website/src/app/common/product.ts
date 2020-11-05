@@ -1,9 +1,8 @@
-export class Product {
+export class ProductDto {
     id: number;
     productName: string;
     imageURL: string;
     unitsInStock: number;
-    active: boolean;
-    dateCreated: Date;
-    lastUpdated: Date;
+    enabled: boolean;
+    categoryName: string;
 }

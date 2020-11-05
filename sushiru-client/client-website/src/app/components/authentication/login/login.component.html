@@ -1,13 +1,17 @@
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Enter your username">
+    <input type="text" class="form-control" id="username" [formControlName]="'username'" required 
+    [ngClass]="{'is-invalid': loginForm.get('username').touched && loginForm.get('username').invalid}"
+     placeholder="Enter your username">
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+    <input type="password" class="form-control" id="password" [formControlName]="'password'" required
+    [ngClass]="{'is-invalid': loginForm.get('password').touched && loginForm.get('password').invalid}"
+    placeholder="Enter your password">
   </div>
   <div class="text-center">
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn" [disabled]="!loginForm.valid">Login</button>
   </div>
 </form>

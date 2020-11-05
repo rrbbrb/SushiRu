@@ -1,24 +1,49 @@
-<div class="row justify-content-center">
-  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6" *ngFor="let product of products">
-    <div id="sushi-card">
-      <p-card [style]="{width: '230px'}" styleClass="ui-card-shadow">
-        <p-header>
-          <img src="Card" src="{{ product.imageURL }}">
-        </p-header>
-        <div id="card-upper" class="row">
-          <div class="col-7">
-            <h4 id="card-title">{{ product.productName }}</h4>
-          </div>
-          <div class="col-2">
-            <p-inputNumber id="card-number-input" size="1" [(ngModel)]="defaultValue" [showButtons]="true" [min]="0"
-              [max]="100" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
-            </p-inputNumber>
-          </div>
-        </div>
-        <p-footer>
-          <a id="add-to-cart" href="#">Add to Cart</a>
-        </p-footer>
-      </p-card>
+<ul class="cards">
+  
+<!-- products enabled start -->
+  <li class="cards-item" *ngFor="let product of products">
+    <div class="card">
+      <div>
+        <img src="{{ product.imageURL }}">
+      </div>
+      <div class="card-content">
+        <table>
+          <tr>
+            <th class="title">
+              <p class="card-title">{{ product.productName }}</p>
+            </th>
+            <th class="input">
+              <input type="number" id="{{product.productName}}" value="1" min="1" max="20">
+            </th>
+          </tr>
+        </table>
+        <a (click)="addToCart(product)">Add to Cart</a>
+      </div>
     </div>
-  </div>
-</div>
+  </li>
+  <!-- products enabled end -->
+
+  <!-- products disabled start -->
+  <li class="cards-item" *ngFor="let product of productsDisabled">
+    <div class="card">
+      <div class="product-disabled">
+        <img src="{{ product.imageURL }}">
+      </div>
+      <div class="card-content product-disabled">
+        <table>
+          <tr>
+            <th class="title">
+              <p class="card-title">{{ product.productName }}</p>
+            </th>
+            <th class="input">
+              <input type="number" id="{{product.productName}}" value="0" min="0" max="0">
+            </th>
+          </tr>
+        </table>
+        <a>Sold out</a>
+      </div>
+    </div>
+  </li>
+  <!-- products disabled end -->
+
+</ul>

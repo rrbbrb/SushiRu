@@ -9,10 +9,12 @@ h3 {
     font-size: 125%;
     font-weight: 600;
     color: #474747;
+    padding-top: 1rem;
   }
 
   .section-title {
     padding-top: 1rem;
+    max-width: 56%;
   }
 
   hr {
@@ -69,8 +71,12 @@ h3 {
     margin: 1.75rem 0rem 0.875rem 0rem;
   }
 
+  input[disabled] {
+    opacity: 45%;
+  }
+
   .form-group {
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.5rem 0rem;
   }
   
   label {
@@ -109,4 +115,61 @@ h3 {
   #change-password-form {
       width: 48%;
       margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 1235px) {
+    table {
+      width: 42%;
+    }
+
+    .section-title {
+      max-width: 70%;
+    }
+
+    #change-password-form {
+      width: 68%;
+    }
+  }
+
+  @media screen and (max-width: 985px) {
+    .section-title {
+      max-width: 78%;
+    }
+
+    #change-password-form {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    .section-title {
+      max-width: 88%;
+    }
+
+    #change-password-form {
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 620px) {
+    table {
+      width: 68%;
+    }
+    #change-password-form {
+      width: 100%;
+    }
+    #change-password-form label, #change-password-form input {
+      font-size: 70%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    label, input[type="text"] {
+      font-size: 70%;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    ::placeholder {
+      font-size: 90%;
+    }
   }

@@ -9,6 +9,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { CheckoutComponent } from './components/shopping-cart/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { AccountComponent } from './components/account/account.component';
+import { SignUpSuccessComponent } from './components/authentication/sign-up-success/sign-up-success.component';
 
 const appRoutes: Routes = [
     { path: 'menu', component: MenuComponent, children: [
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
         { path: 'user/login', component: LoginComponent },
         { path: 'user/signup', component: SignupComponent }
     ] },
+    { path: 'signup-success', component: SignUpSuccessComponent },
     { path: 'cart', component: ShoppingCartComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'orders', component: OrderHistoryComponent },

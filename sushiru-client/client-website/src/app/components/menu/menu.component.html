@@ -6,7 +6,7 @@
 </div>
 
 <!-- menu bar -->
-<ul class="nav justify-content-center menu-bar" style="height: 78px;">
+<ul class="nav justify-content-center menu-bar">
   <li *ngFor="let category of productCategories" class="nav-item">
     <a class="nav-link menu-category" routerLink="/menu/category/{{ category.id }}" routerLinkActive="active">
       {{ category.categoryName }}

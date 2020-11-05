@@ -8,36 +8,73 @@
     <h4>Items</h4>
     <hr>
     <!-- card start -->
-    <div class="card my-4" style="max-height: auto; max-width: auto;">
-      <div class="row no-gutters">
+    <!-- availble items start -->
+    <div *ngIf="cart.length == 0">
+      <h5 class="empty-cart">
+        Your shopping cart is empty.
+      </h5>
+    </div>
 
-        <div class="col-md-5">
-          <img src="../../../assets/images/products/ArcticSurfClam.png" class="card-img" alt="...">
+    <div >
+      <div class="card my-4" style="max-height: auto; max-width: auto;" *ngFor="let item of cart">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="{{item.productDto.imageURL}}" class="card-img" alt="{{item.productDto.productName}}">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{item.productDto.productName}}
+              </h5>
+              <table>
+                <tr class="card-text">
+                  <td>Quantity:</td>
+                  <td>
+                    <select (change)="updateQuantity($event, item.productDto.productName)">
+                      <option *ngFor="let n of getQuantityBounds(item.productDto, item.quantity)" value="{{n}}"
+                      [selected]="n === item.quantity">{{n}}</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr class="card-text">
+                  <td>Subtotal:</td>
+                  <td>{{calculateSubtotal(item.quantity) | currency: 'NTD': 'NT$ ': '1.0-0'}}</td>
+                </tr>
+                <tr><a (click)="deleteCartItem(item.productDto.productName)">Remove</a></tr>
+              </table>
+            </div>
+          </div>
         </div>
-
-        <div class="col-md-7">
-          <div class="card-body">
-
-            <h5 class="card-title">Kabayaki Conger Eel Hand Roll</h5>
-
-            <div class="row" style="height: 40px;">
-              <div class="col-6">
-                <p class="card-text">Quantity:</p>
-              </div>
-              <div class="col-6 text-left">
-                <p-inputNumber id="card-number-input" size="1" [(ngModel)]="value" [showButtons]="true" [min]="0"
-                  [max]="100" decrementButtonClass="ui-button-secondary" incrementButtonClass="ui-button-secondary">
-                </p-inputNumber>
+      </div>
+    <!-- availble items end -->
+    <!-- unavailble items start -->
+      <div *ngIf="cartUnavailable.length > 0">
+        <h4>Unavailable Items</h4>
+        <hr>
+  
+        <div class="card my-4" style="max-height: auto; max-width: auto;" *ngFor="let item of cartUnavailable">
+          <div class="row no-gutters">
+            <div class="col-md-5 card-disabled">
+              <img src="{{item.productDto.imageURL}}" class="card-img" alt="{{item.productDto.productName}}">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h5 class="card-title card-disabled">
+                  {{item.productDto.productName}}
+                </h5>
+                <table>
+                  <tr class="card-text card-disabled">
+                    <td>Sold out</td>
+                  </tr>
+                  <tr><a (click)="deleteCartItem(item.productDto.productName)">Remove</a></tr>
+                </table>
               </div>
             </div>
-
-            <p class="card-text">Subtotal:</p>
-
           </div>
-
         </div>
-
       </div>
+    <!-- unavailble items end -->
+
     </div>
     <!-- card end -->
 
@@ -49,50 +86,56 @@
     <h4>Order Summary</h4>
     <hr>
 
+    <!-- order summary start -->
     <div id="cost-details">
 
-      <div class="row" style="margin-top: 2.5rem;">
-        <div class="col-md-4 col-sm-5 col-xs-3">
-          <p>Food:</p>
-        </div>
-        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
-          <p>NT$ 2400</p>
-        </div>
-      </div>
+      <table style="margin-top: 2.5rem;">
+        <tr>
+          <td>
+            <p>Food:</p>
+          </td>
+          <td style="text-align: right;">
+            <p>{{calculateTotalAmount() | currency: 'NTD': 'NT$ ': '1.0-0'}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Delivery Cost:</p>
+          </td>
+          <td style="text-align: right;">
+            <p>{{deliveryCost | currency: 'NTD': 'NT$ ': '1.0-0'}}</p>
+          </td>
+        </tr>
+      </table>
 
       <div class="row">
-        <div class="col-md-4 col-sm-5">
-          <p>Delivery Cost:</p>
-        </div>
-        <div class="col-md-3 col-sm-4 text-right">
-          <p>NT$ 50</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-7 col-sm-9">
+        <div class="col-md-9 col-sm-10">
           <hr id="costs-cal">
         </div>
       </div>
 
-      <div class="row mt-2" id="total-cost">
-        <div class="col-md-4 col-sm-5">
-          <p>Total:</p>
-        </div>
-        <div class="col-md-3 col-sm-4 text-right">
-          <p>NT$ 290</p>
-        </div>
-      </div>
+      <table>
+        <tr id="total-cost">
+          <td>
+            <p>Total:</p>
+          </td>
+          <td style="text-align: right;">
+            <p *ngIf="cart.length != 0">{{calculateTotal() | currency: 'NTD': 'NT$ ': '1.0-0'}}</p>
+            <p *ngIf="cart.length == 0">Unavailable</p>
+          </td>
+        </tr>
+      </table>
 
       <div class="row">
-        <div class="col-md-7 col-sm-9 text-center">
-          <button class="btn" routerLink="/checkout">
+        <div class="col-md-9 col-sm-10 text-center">
+          <button class="btn" (click)="checkout()" [disabled]="cart.length == 0">
             Proceed to Checkout
           </button>
         </div>
       </div>
 
     </div>
+    <!-- order summary end -->
 
   </div>
 

@@ -4,20 +4,62 @@
 }
 
 .nav-link {
-    font-size: 1.15rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    align-items: center;
-    text-align: center;
-    padding: 0rem 0rem 1rem 0rem;
-    margin: 3.5rem 1.2rem 2rem 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 3.5rem 1.2rem 2rem 1.2rem;
 }
 
 .nav-link:hover {
-    color: #737373;
+  color: #737373;
 }
 
-.nav-link:focus, .nav-link:active {
-    color: #474747;
+.nav-link:focus,
+.nav-link:active {
+  color: #474747;
 }
 
+p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.btn {
+  background-color: #FF1384;
+  color: #FFFFFF;
+  margin: 2.5rem 1rem 0.8rem 1rem;
+  padding: 0.6rem 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #FF66B2;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.log-out {
+    min-height: 500px;
+    margin: 5rem 0rem 3rem 0rem;
+}
+
+.log-out a {
+    text-decoration: none;
+    color: #FF1384;
+}
+
+.log-out a:hover {
+    color: #FF66B2;
+}
+
+span {
+  color: #FF1384;
+  font-weight: 700;
+}

@@ -190,6 +190,13 @@ html {
   font-family: 'Noto Sans', 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;
   -ms-overflow-style: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 html::-webkit-scrollbar {
@@ -230,12 +237,6 @@ p {
   font-weight: 200;
   line-height: 1.5rem;
   font-size: 1rem;
-}
-
-
-.banner {
-  max-width: 100%;
-  padding: 1.5% 0% 1.5% 0%;
 }
 
 .nav-link {
